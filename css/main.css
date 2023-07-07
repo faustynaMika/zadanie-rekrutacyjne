@@ -11,7 +11,7 @@ body {
   box-sizing: border-box;
   top: 0;
   width: 100%;
-  height: 150px;
+  height: 100px;
 }
 .navbar__logo a {
   font-size: 30px;
@@ -66,8 +66,10 @@ body {
   display: block;
   cursor: pointer;
 }
+
 @media only screen and (min-width: 992px) {
   .navbar {
+    height: 80px;
     flex-wrap: wrap;
   }
   .navbar__logo {
@@ -83,7 +85,6 @@ body {
     display: none;
   }
 }
-
 .main {
   padding: 15px;
   margin-bottom: 20px;
