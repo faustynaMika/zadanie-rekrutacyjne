@@ -25,12 +25,13 @@ body {
       font-weight: bold;
       text-decoration: none;
       color: #ffffff;
+      margin-right: 0
     }
   }
 
   &__menu {
     list-style: none;
-    display: flex;
+    display: none;
 
     &--item {
       margin-right: 50px;
@@ -66,7 +67,7 @@ body {
   }
 
   &__button {
-    padding-right: 30px;
+    display: none;
 
     button {
       background-color: white;
@@ -79,10 +80,11 @@ body {
   }
 
   &__hamburger {
-    display: none;
+    display: block;
+    cursor: pointer;
   }
 
-  @media screen and (max-width: 767px) {
+  @media only screen and (min-width: 992px) {
     flex-wrap: wrap;
 
     &__logo {
@@ -90,34 +92,36 @@ body {
     }
 
     &__menu {
-      display: none;
+      display: flex;
 
     }
 
     &__button {
-      display: none;
+      display: block;
     }
     &__hamburger {
-      display: block;
-      cursor: pointer;
+      display: none;
     }
   }
 }
 
 
 .main {
-  padding: 150px;
+  padding: 15px;
+  margin-bottom: 20px;
 
   .content {
     display: flex;
     align-items: center;
     text-align: center;
+    flex-direction: column-reverse;
 
     &__text {
       grid-column: 1;
 
-      &.content__description {
+      .content__description {
         color: black;
+        padding: 0% 20%;
       }
     }
 
@@ -129,16 +133,17 @@ body {
     }
   }
 
-  @media screen and (max-width: 767px) {
-    padding: 15px;
+  @media only screen and (min-width: 992px) {
+    padding: 100px;
 
     .content {
-      flex-direction: column-reverse;
+      flex-direction: row;
     }
   }
 
   .card-list {
     display: flex;
+    flex-direction: column;
 
     .card {
       flex: 1;
@@ -172,9 +177,9 @@ body {
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @media only screen and (min-width: 992px) {
     .card-list {
-      flex-direction: column;
+      flex-direction: row;
     }
   }
 
@@ -183,6 +188,9 @@ body {
 .footer {
   background-color: $table_footer;
   padding: 20px;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
 
   &__text {
     text-align: center;

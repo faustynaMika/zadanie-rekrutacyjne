@@ -17,10 +17,11 @@ body {
   font-weight: bold;
   text-decoration: none;
   color: #ffffff;
+  margin-right: 0;
 }
 .navbar__menu {
   list-style: none;
-  display: flex;
+  display: none;
 }
 .navbar__menu--item {
   margin-right: 50px;
@@ -49,7 +50,7 @@ body {
   text-decoration: none;
 }
 .navbar__button {
-  padding-right: 30px;
+  display: none;
 }
 .navbar__button button {
   background-color: white;
@@ -60,9 +61,10 @@ body {
   border: none;
 }
 .navbar__hamburger {
-  display: none;
+  display: block;
+  cursor: pointer;
 }
-@media screen and (max-width: 767px) {
+@media only screen and (min-width: 992px) {
   .navbar {
     flex-wrap: wrap;
   }
@@ -70,45 +72,48 @@ body {
     margin-right: 0;
   }
   .navbar__menu {
-    display: none;
+    display: flex;
   }
   .navbar__button {
-    display: none;
+    display: block;
   }
   .navbar__hamburger {
-    display: block;
-    cursor: pointer;
+    display: none;
   }
 }
 
 .main {
-  padding: 150px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 .main .content {
   display: flex;
   align-items: center;
   text-align: center;
+  flex-direction: column-reverse;
 }
 .main .content__text {
   grid-column: 1;
 }
-.main .content__text.content__description {
+.main .content__text .content__description {
   color: black;
+  padding: 0% 20%;
 }
 .main .content__image-img {
   width: 100%;
   object-fit: contain;
 }
-@media screen and (max-width: 767px) {
+@media only screen and (min-width: 992px) {
   .main {
-    padding: 15px;
+    padding: 100px;
   }
   .main .content {
-    flex-direction: column-reverse;
+    flex-direction: row;
   }
 }
 .main .card-list {
   display: flex;
+  flex-direction: column;
 }
 .main .card-list .card {
   flex: 1;
@@ -137,15 +142,18 @@ body {
   cursor: pointer;
   align-items: center;
 }
-@media screen and (max-width: 767px) {
+@media only screen and (min-width: 992px) {
   .main .card-list {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
 .footer {
   background-color: #E0E0E0;
   padding: 20px;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
 }
 .footer__text {
   text-align: center;
