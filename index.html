@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Zadanie Rekrutacyjne</title>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar__logo">
+        <a href="#">LOGO</a>
+    </div>
+    <ul class="navbar__menu" id="menu">
+        <li class="navbar__menu--item"><a href="#">Link</a></li>
+        <li class="navbar__menu--item"><a href="#">Link</a></li>
+        <li class="navbar__menu--item"><a href="#">Link</a></li>
+        <li class="navbar__menu--item"><a href="#">Link</a></li>
+        <li class="navbar__menu--item"><a href="#">Link</a></li>
+    </ul>
+    <div class="navbar__button">
+        <button>Button</button>
+    </div>
+    <div class="navbar__hamburger" onclick="displayMobileMenu()">
+        <img src="assets/icons/menu.svg">
+    </div>
+
+    <ul class="navbar__mobile_menu" id="mobile_menu">
+        <li class="navbar__mobile_menu--item"><a href="#">Link</a></li>
+        <li class="navbar__mobile_menu--item"><a href="#">Link</a></li>
+        <li class="navbar__mobile_menu--item"><a href="#">Link</a></li>
+        <li class="navbar__mobile_menu--item"><a href="#">Link</a></li>
+        <li class="navbar__mobile_menu--item"><a href="#">Link</a></li>
+    </ul>
+
+</nav>
+
+<main class="main">
+    <section class="content">
+        <div class="content__text">
+            <h2 class="content__title">Lorem Ipsum dolor sit amet!</h2>
+            <p class="content__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has
+                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into
+                electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+        <div class="content__image">
+            <img src="assets/photo/photo.png" alt="photo" class="content__image-img">
+        </div>
+    </section>
+
+    <div class="card-list">
+        <div class="card">
+            <h3 class="card-title">Lorem Ipsum</h3>
+            <p class="card__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <button class="card__button">Button</button>
+        </div>
+        <div class="card">
+            <h3 class="card-title">Lorem Ipsum</h3>
+            <p class="card__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <button class="card__button">Button</button>
+        </div>
+        <div class="card">
+            <h3 class="card-title">Lorem Ipsum</h3>
+            <p class="card__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <button class="card__button">Button</button>
+        </div>
+    </div>
+</main>
+
+
+<footer class="footer">
+    <div class="footer__text">Lorem Ipsum</div>
+</footer>
+
+<script>
+    function displayMobileMenu() {
+        let menu = document.getElementById('menu');
+
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none'
+        } else {
+            menu.style.display = 'flex'
+        }
+    }
+
+    window.addEventListener("resize", function() {
+        let windowWidth = window.innerWidth;
+        let menu = document.getElementById('menu');
+
+        if (windowWidth > 767) {
+            menu.style.display = 'flex'
+        } else {
+            menu.style.display = 'none'
+        }
+    });
+
+</script>
+
+</body>
+</html>
